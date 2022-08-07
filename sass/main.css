@@ -1,0 +1,382 @@
+/*
+COLORS:
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+def 16 62 20
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+32 4.8
+border-radius:3.2
+letter-spacing 36
+logo-size 3.2
+animation : .5s 
+
+
+...............
+font-weight:100 300 400 700 900
+def:400 700
+****
+font-sizes:16
+defualt 16
+line-height:DEF 1.7
+*/
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+
+
+}
+         supported by Chrome, Edge, Opera and Firefox */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "League Spartan";
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: hsl(0deg, 0%, 63%);
+}
+
+.shop-now {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 1.6rem;
+  letter-spacing: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  display: inline-block;
+}
+.shop-now:hover {
+  opacity: 0.4;
+}
+.shop-now__arrow {
+  margin-left: 2rem;
+  width: 5rem;
+}
+
+.heading-primary {
+  color: black;
+  font-size: 3.6rem;
+}
+
+.heading-secondary {
+  color: black;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-back-red {
+  background-color: red;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
+.u-margin-right-small {
+  margin-right: 2rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.u-margin-top-small {
+  margin-top: 2rem;
+}
+
+.u-outline {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.u-rotate {
+  transform: rotate(180deg);
+}
+
+.slider {
+  background-color: red;
+  overflow: hidden;
+  z-index: -1;
+}
+.slider__container {
+  background-color: blue;
+  display: flex;
+  width: 300%;
+}
+.slider__img {
+  width: 100%;
+  transition: 0.3s;
+  display: block;
+}
+
+picture {
+  width: 100%;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+.buttons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.buttons__btn {
+  width: 3rem;
+  height: 3rem;
+}
+.buttons__container {
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.buttons__container:hover {
+  background-color: hsl(0deg, 0%, 27%);
+}
+@media (min-width: 1000px) {
+  .buttons {
+    display: none;
+  }
+}
+
+.d {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .d {
+    display: flex;
+    position: relative;
+    display: flex !important;
+    grid-column: 7/8;
+    align-self: end;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .d .buttons__container {
+    width: 100%;
+  }
+}
+
+.mnav {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+  z-index: 500;
+}
+@media (min-width: 1000px) {
+  .mnav {
+    display: none;
+  }
+}
+.mnav__img {
+  width: auto;
+  cursor: pointer;
+}
+.mnav__content {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+.mnav__list {
+  background-color: white;
+  display: flex;
+  gap: 2rem;
+}
+.mnav__link {
+  color: black;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.mnav--initial {
+  visibility: 0;
+  opacity: 0;
+  display: none;
+  z-index: 0;
+}
+
+.hamber {
+  width: 24px;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  cursor: pointer;
+  z-index: 200;
+}
+@media (min-width: 1000px) {
+  .hamber {
+    display: none;
+  }
+}
+
+.navigation {
+  position: absolute;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 100;
+}
+@media (min-width: 1000px) {
+  .navigation {
+    justify-content: start;
+    align-items: center;
+  }
+}
+.navigation__list {
+  margin-left: 4rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+.navigation__item {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.navigation__item:hover::after {
+  background-size: 200%;
+}
+.navigation__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, white 0, white 50%, transparent 50%);
+  background-size: 0%;
+  display: block;
+  position: absolute;
+  transition: 0 ease-in;
+}
+.navigation__logo {
+  font-size: 2.4rem;
+  color: white;
+}
+.navigation__desktop {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .navigation__desktop {
+    display: block;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 40rem;
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+}
+@media (min-width: 1000px) {
+  .main {
+    margin: 0;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+.section-slider {
+  position: relative;
+}
+@media (min-width: 1000px) {
+  .section-slider {
+    grid-column: 1/7;
+  }
+}
+
+.section-text-top {
+  padding: 4rem 2rem;
+}
+@media (min-width: 1000px) {
+  .section-text-top {
+    grid-row: 1/2;
+    grid-column: 7/11;
+  }
+}
+
+.section-about {
+  padding: 4rem 2rem;
+}
+@media (min-width: 1000px) {
+  .section-about {
+    grid-column: 4/8;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section__img1 {
+    align-self: start;
+    grid-column: 1/4;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section__img2 {
+    align-self: start;
+    grid-column: 8/-1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

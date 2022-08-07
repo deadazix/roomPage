@@ -1,0 +1,49 @@
+.buttons{
+    img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    &__btn{
+        width: 3rem;
+        height: 3rem;
+    }
+    &__container{
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        transition: .2s;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-primary2;
+            
+        }
+        
+    }
+    @include res{
+        display: none;
+        
+    }
+}
+.d{
+    display: none;
+    @include res{
+        display: flex;
+        position: relative;
+        display: flex !important;
+        grid-column: 7/8;
+        align-self: end;
+        grid-row: 1/2;
+        width: 100%;
+        .buttons__container{
+            
+            width: 100%;
+        }
+    }
+}
